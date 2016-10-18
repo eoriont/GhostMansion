@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BarAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../libs/BarAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

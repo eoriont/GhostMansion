@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GhostMansion:jar">
+    <output-path>$USER_HOME$/Desktop/Minecraft Server/plugins</output-path>
+    <root id="archive" name="GhostMansion.jar">
+      <element id="module-output" name="GhostMansion" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../libs/spigot 1.10.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
