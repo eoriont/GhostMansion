@@ -127,7 +127,7 @@ public class Plugin extends JavaPlugin implements Listener {
             spawnBattery();
         }
         if(label.equalsIgnoreCase("cl")) {
-            p.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 1000000, 10, true, false));
+            clearStats();
         }
         if(label.equalsIgnoreCase("st")) {
             stopGame();
