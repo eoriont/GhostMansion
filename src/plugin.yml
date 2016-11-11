@@ -8,3 +8,7 @@ commands:
     description: Test
   spawnb:
     description: Spawns a battery.
+  st:
+    description: stops game
+  cl:
+    description: clears stats
