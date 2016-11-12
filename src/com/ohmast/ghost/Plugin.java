@@ -234,19 +234,15 @@ public class Plugin extends JavaPlugin implements Listener {
             else setupPlayer(p);
             numingame++;
         }
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-            public void run() {
-                for (Player p : ingame.keySet()) {
-                    if(flashlights.get(p) != null && flashlights.get(p) && flashlighthealth.get(p) > 0) flashlighthealth.put(p, flashlighthealth.get(p) - 1);
-                }
-                if(count % 10 == 0) spawnBattery();
-                count++;
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            for (Player p : ingame.keySet()) {
+                if(flashlights.get(p) != null && flashlights.get(p) && flashlighthealth.get(p) > 0)
+                    flashlighthealth.put(p, flashlighthealth.get(p) - 1);
             }
+            if(count % 10 == 0) spawnBattery();
+            count++;
         }, 0, 20);
-
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {public void run() {
-                tick();
-            }}, 0, 1);
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> tick(), 0, 1);
         gameon = true;
     }
 
@@ -481,19 +477,17 @@ public class Plugin extends JavaPlugin implements Listener {
     }
     public void delayStart() {
         countdown = 4;
-        id = getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-            public void run() {
-                if(countdown == 0) {
-                    getServer().getScheduler().cancelTask(id);
-                    startGame();
-                    return;
-                } else if (countdown == 1) {
-                    sendTitle(ChatColor.GREEN + "GO!", ChatColor.GRAY+"Have Fun!",1,0);
-                } else {
-                    sendTitle(ChatColor.GOLD + "Game Starts in " + (countdown-1),"",3,0);
-                }
-                countdown--;
+        id = getServer().getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            if(countdown == 0) {
+                getServer().getScheduler().cancelTask(id);
+                startGame();
+                return;
+            } else if (countdown == 1) {
+                sendTitle(ChatColor.GREEN + "GO!", ChatColor.GRAY+"Have Fun!",1,0);
+            } else {
+                sendTitle(ChatColor.GOLD + "Game Starts in " + (countdown-1),"",3,0);
             }
+            countdown--;
         }, 0,  20);
     }
     public void flashlightGhost() {
@@ -502,20 +496,18 @@ public class Plugin extends JavaPlugin implements Listener {
         ghost.removePotionEffect(PotionEffectType.INVISIBILITY);
 
         countdown1 = 10;
-        id1 = getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-            public void run() {
-                ghost.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 10, 2, true, false));
-                ghost.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 25, true, false));
-                if(countdown1 == 0) {
-                    server.getScheduler().cancelTask(id1);
-                    ghost.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
-                    ghost.removePotionEffect(PotionEffectType.SPEED);
-                    ghost.removePotionEffect(PotionEffectType.GLOWING);
-                    ghostf = false;
-                    return;
-                }
-                countdown1--;
+        id1 = getServer().getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            ghost.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 10, 2, true, false));
+            ghost.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 100, 25, true, false));
+            if(countdown1 == 0) {
+                server.getScheduler().cancelTask(id1);
+                ghost.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
+                ghost.removePotionEffect(PotionEffectType.SPEED);
+                ghost.removePotionEffect(PotionEffectType.GLOWING);
+                ghostf = false;
+                return;
             }
+            countdown1--;
         }, 0, 20);
     }
     public void instructions() {
@@ -529,14 +521,12 @@ public class Plugin extends JavaPlugin implements Listener {
         messageAllNL("1. SCARE EVERYONE");
         messageAllNL("2. Don't get hit by flashlights");
         messageAllNL(""+ChatColor.BOLD+ChatColor.STRIKETHROUGH+"--------------------");
-        id2 = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
-            public void run() {
-                if(countdown2 == 0) {
-                    Bukkit.getScheduler().cancelTask(id2);
-                    delayStart();
-                }
-                countdown2--;
+        id2 = Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            if(countdown2 == 0) {
+                Bukkit.getScheduler().cancelTask(id2);
+                delayStart();
             }
+            countdown2--;
         }, 0, 20);
     }
     public void win(String who) {

@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c83df22-0a92-4ac3-8817-98378ecb77d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" afterPath="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" />
     </list>
     <ignored path="GhostMansion.iws" />
@@ -30,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Plugin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Plugin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+            <state relative-caret-position="206">
+              <caret line="504" column="50" selection-start-line="504" selection-start-column="50" selection-end-line="504" selection-end-column="50" />
               <folding>
                 <element signature="method#switchFlashlight#0;class#Plugin#0" expanded="false" />
                 <element signature="method#clearStats#0;class#Plugin#0" expanded="false" />
@@ -52,8 +51,6 @@
                 <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
                 <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
                 <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-                <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-                <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
                 <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
                 <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
               </folding>
@@ -71,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
             <state />
@@ -115,8 +112,8 @@
         <option value="$PROJECT_DIR$/src/com/ohmast/ghost/Title.java" />
         <option value="$PROJECT_DIR$/src/com/ohmast/ghost/PacketUtils.java" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" />
       </list>
     </option>
   </component>
@@ -152,7 +149,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,6 +170,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478878080020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding stuff to readme.md">
+      <created>1478883614210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1478883614210</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -510,7 +514,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding jar file&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding jar file&#10;" />
+    <MESSAGE value="adding stuff to readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding stuff to readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,6 +528,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="493">
+            <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -544,8 +563,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -595,8 +612,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -632,8 +647,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -669,8 +682,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -706,8 +717,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -743,8 +752,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -780,8 +787,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -817,8 +822,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -854,8 +857,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -891,8 +892,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -928,8 +927,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -965,8 +962,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1002,8 +997,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1039,8 +1032,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1076,8 +1067,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1113,8 +1102,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1150,8 +1137,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1187,8 +1172,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1224,8 +1207,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1261,8 +1242,6 @@
             <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
             <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
             <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
             <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
           </folding>
@@ -1295,35 +1274,6 @@
     <entry file="file://$USER_HOME$/Desktop/com/gianscode/glowgui/Main.class" />
     <entry file="file://$USER_HOME$/Desktop/com/gianscode/glowgui/listeners/PlayerCommandPreprocess.class" />
     <entry file="file://$USER_HOME$/Desktop/com/gianscode/glowgui/commands/GlowGUI.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
-          <folding>
-            <element signature="method#switchFlashlight#0;class#Plugin#0" expanded="false" />
-            <element signature="method#clearStats#0;class#Plugin#0" expanded="false" />
-            <element signature="method#clearPotionEffects#0;class#Plugin#0" expanded="false" />
-            <element signature="method#killPlayer#0;class#Plugin#0" expanded="false" />
-            <element signature="method#raycast#0;class#Plugin#0" expanded="false" />
-            <element signature="method#getNearbyEntities#0;class#Plugin#0" expanded="false" />
-            <element signature="method#isInBorder#0;class#Plugin#0" expanded="false" />
-            <element signature="method#sendTitle#0;class#Plugin#0" expanded="false" />
-            <element signature="method#sendTitle#1;class#Plugin#0" expanded="false" />
-            <element signature="method#sendActionBar#0;class#Plugin#0" expanded="false" />
-            <element signature="method#batteryStringMaker#0;class#Plugin#0" expanded="false" />
-            <element signature="method#collectBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#ghostDetect#0;class#Plugin#0" expanded="false" />
-            <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
-            <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
-            <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
-            <element signature="method#delayStart#0;class#Plugin#0" expanded="false" />
-            <element signature="method#flashlightGhost#0;class#Plugin#0" expanded="false" />
-            <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
-            <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1349,6 +1299,33 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="504" column="50" selection-start-line="504" selection-start-column="50" selection-end-line="504" selection-end-column="50" />
+          <folding>
+            <element signature="method#switchFlashlight#0;class#Plugin#0" expanded="false" />
+            <element signature="method#clearStats#0;class#Plugin#0" expanded="false" />
+            <element signature="method#clearPotionEffects#0;class#Plugin#0" expanded="false" />
+            <element signature="method#killPlayer#0;class#Plugin#0" expanded="false" />
+            <element signature="method#raycast#0;class#Plugin#0" expanded="false" />
+            <element signature="method#getNearbyEntities#0;class#Plugin#0" expanded="false" />
+            <element signature="method#isInBorder#0;class#Plugin#0" expanded="false" />
+            <element signature="method#sendTitle#0;class#Plugin#0" expanded="false" />
+            <element signature="method#sendTitle#1;class#Plugin#0" expanded="false" />
+            <element signature="method#sendActionBar#0;class#Plugin#0" expanded="false" />
+            <element signature="method#batteryStringMaker#0;class#Plugin#0" expanded="false" />
+            <element signature="method#collectBattery#0;class#Plugin#0" expanded="false" />
+            <element signature="method#ghostDetect#0;class#Plugin#0" expanded="false" />
+            <element signature="method#setupGhost#0;class#Plugin#0" expanded="false" />
+            <element signature="method#setupPlayer#0;class#Plugin#0" expanded="false" />
+            <element signature="method#spawnBattery#0;class#Plugin#0" expanded="false" />
+            <element signature="method#instructions#0;class#Plugin#0" expanded="false" />
+            <element signature="method#newGhost#0;class#Plugin#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
