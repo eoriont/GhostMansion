@@ -63,6 +63,8 @@ public class Plugin extends JavaPlugin implements Listener {
 
     public boolean gameon = false;
     public boolean ghostf = false;
+    public boolean starting = false;
+    public boolean autoStart = false;
 
     public int count;
     public int countdown = 3;
@@ -73,6 +75,7 @@ public class Plugin extends JavaPlugin implements Listener {
     public int countdown2 = 5;
     public int time = 0;
     public int numingame = 0;
+    public int delayNewGameStart = 0;
 
     public ScoreboardManager manager;
     public Scoreboard board;
@@ -81,6 +84,11 @@ public class Plugin extends JavaPlugin implements Listener {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
         messageAll("Loaded Ghost Mansion!");
+
+        getConfig().options().copyDefaults(true);
+        saveConfig();
+
+        autoStart = getConfig().getBoolean("autoStart");
 
         flashlighton = new ItemStack(Material.BLAZE_ROD, 1);
         ItemMeta flashlightmeta = flashlighton.getItemMeta();
@@ -105,10 +113,9 @@ public class Plugin extends JavaPlugin implements Listener {
         d3meta.setDisplayName(ChatColor.AQUA + "Ghost Detector");
         ghostdetector3.setItemMeta(d3meta);
 
-        manager = Bukkit.getScoreboardManager();
-        board = manager.getNewScoreboard();
-        objective = board.registerNewObjective("","");
+        resetScoreboard();
         clearStats();
+        autoStart();
     }
 
     public void onDisable() {
@@ -121,7 +128,8 @@ public class Plugin extends JavaPlugin implements Listener {
             instructions();
         }
         if(label.equalsIgnoreCase("test")) {
-            p.sendMessage(ingame.toString());
+            message(""+delayNewGameStart, p);
+            message(""+starting, p);
         }
         if(label.equalsIgnoreCase("spawnb")) {
             spawnBattery();
@@ -132,12 +140,16 @@ public class Plugin extends JavaPlugin implements Listener {
         if(label.equalsIgnoreCase("st")) {
             stopGame();
         }
+        if(label.equalsIgnoreCase("autostart")) {
+            autoStart = !autoStart;
+            message("Autostart has been set to: " + autoStart, p);
+        }
         return true;
     }
 
     @EventHandler
     public void playerJoin(PlayerJoinEvent e) {
-        e.setJoinMessage("");
+        e.setJoinMessage(ChatColor.GREEN+e.getPlayer().getName()+" has joined!");
         if(gameon) {
             killPlayer(e.getPlayer());
         }
@@ -189,7 +201,8 @@ public class Plugin extends JavaPlugin implements Listener {
 
     @EventHandler
     public void foodChange(FoodLevelChangeEvent e) {
-        e.setCancelled(false);
+        Player p = (Player) e.getEntity();
+        p.setFoodLevel(20);
     }
 
     @EventHandler
@@ -210,16 +223,7 @@ public class Plugin extends JavaPlugin implements Listener {
     public void startGame() {
         if(gameon) stopGame();
         newGhost();
-        manager = Bukkit.getScoreboardManager();
-        board = manager.getNewScoreboard();
-        objective = board.registerNewObjective("people", "dummy");
-        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
-        objective.setDisplayName(""+ ChatColor.AQUA+ChatColor.BOLD+"oriont's Ghost Mansion");
-        objective.getScore(ChatColor.GREEN+"Time Left:").setScore(6);
-        objective.getScore(ChatColor.GOLD+"Ghost:").setScore(0);
-        objective.getScore(ghost.getDisplayName()).setScore(-1);
-        objective.getScore(ChatColor.GREEN+"Players Alive: ").setScore(-2);
-        objective.getScore(ChatColor.GOLD+"oriont's Ghost Mansion").setScore(-4);
+        setupScoreboard();
         ingame.clear();
         flashlights.clear();
         flashlighthealth.clear();
@@ -280,6 +284,7 @@ public class Plugin extends JavaPlugin implements Listener {
         flashlighthealth.clear();
         count = 0;
         gameon = false;
+        starting = false;
         countdown = 3;
         countdown1 = 10;
         id = 0;
@@ -288,10 +293,9 @@ public class Plugin extends JavaPlugin implements Listener {
         countdown2 = 5;
         time = 600;
         ghost = null;
-        manager = Bukkit.getScoreboardManager();
-        board = manager.getNewScoreboard();
-        objective = board.registerNewObjective("","");
+        resetScoreboard();
         clearStats();
+        autoStart();
     }
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -476,7 +480,7 @@ public class Plugin extends JavaPlugin implements Listener {
         }
     }
     public void delayStart() {
-        countdown = 4;
+        countdown = getConfig().getInt("delayToStart");
         id = getServer().getScheduler().scheduleSyncRepeatingTask(this, () -> {
             if(countdown == 0) {
                 getServer().getScheduler().cancelTask(id);
@@ -484,7 +488,7 @@ public class Plugin extends JavaPlugin implements Listener {
                 return;
             } else if (countdown == 1) {
                 sendTitle(ChatColor.GREEN + "GO!", ChatColor.GRAY+"Have Fun!",1,0);
-            } else {
+            } else if (countdown < 11 || count % 5 == 0){
                 sendTitle(ChatColor.GOLD + "Game Starts in " + (countdown-1),"",3,0);
             }
             countdown--;
@@ -511,6 +515,7 @@ public class Plugin extends JavaPlugin implements Listener {
         }, 0, 20);
     }
     public void instructions() {
+        starting = true;
         messageAllNL(""+ChatColor.BOLD+ChatColor.STRIKETHROUGH+"--------------------");
         messageAllNL(""+ChatColor.BOLD+"oriont's Ghost Mansion");
         messageAllNL(ChatColor.RED+"If you are a player:");
@@ -557,5 +562,35 @@ public class Plugin extends JavaPlugin implements Listener {
         Player ghost = (Player) players.get(rand);
         this.ghost = ghost;
         messageAll("The new ghost is " + ghost.getDisplayName());
+    }
+    public void setupScoreboard() {
+        manager = Bukkit.getScoreboardManager();
+        board = manager.getNewScoreboard();
+        objective = board.registerNewObjective("people", "dummy");
+        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+        objective.setDisplayName(""+ ChatColor.AQUA+ChatColor.BOLD+"oriont's Ghost Mansion");
+        objective.getScore(ChatColor.GREEN+"Time Left:").setScore(6);
+        objective.getScore(ChatColor.GOLD+"Ghost:").setScore(0);
+        objective.getScore(ghost.getDisplayName()).setScore(-1);
+        objective.getScore(ChatColor.GREEN+"Players Alive: ").setScore(-2);
+        objective.getScore(ChatColor.GOLD+"oriont's Ghost Mansion").setScore(-4);
+    }
+    public void resetScoreboard() {
+        manager = Bukkit.getScoreboardManager();
+        board = manager.getNewScoreboard();
+        objective = board.registerNewObjective("","");
+    }
+    public void autoStart() {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            if(autoStart) {
+                if (!gameon) {
+                    if (starting && delayNewGameStart != 0) delayNewGameStart = 0;
+                    if (getServer().getOnlinePlayers().size() > 1 && !starting) {
+                        if (delayNewGameStart == getConfig().getInt("delayNewGameStart") * 20) instructions();
+                        else delayNewGameStart++;
+                    }
+                }
+            }
+        }, 0, 1);
     }
 }

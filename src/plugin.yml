@@ -12,3 +12,5 @@ commands:
     description: stops game
   cl:
     description: clears stats
+  autostart:
+    description: Toggles auto-start.
