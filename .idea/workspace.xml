@@ -6,11 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c83df22-0a92-4ac3-8817-98378ecb77d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config.yml" />
+    <list default="true" id="0c83df22-0a92-4ac3-8817-98378ecb77d5" name="Default" comment="making automessages and updating jar">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GhostMansion/com/ohmast/ghost/Plugin.class" afterPath="$PROJECT_DIR$/out/production/GhostMansion/com/ohmast/ghost/Plugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/GhostMansion_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/GhostMansion_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GhostMansion/config.yml" afterPath="$PROJECT_DIR$/out/production/GhostMansion/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" afterPath="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config.yml" afterPath="$PROJECT_DIR$/src/config.yml" />
     </list>
     <ignored path="GhostMansion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="Plugin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="204" column="25" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
+            <state relative-caret-position="597">
+              <caret line="488" column="29" selection-start-line="488" selection-start-column="29" selection-end-line="488" selection-end-column="29" />
               <folding>
                 <element signature="method#switchFlashlight#0;class#Plugin#0" expanded="false" />
                 <element signature="method#clearStats#0;class#Plugin#0" expanded="false" />
@@ -61,6 +63,7 @@
                 <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
                 <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
                 <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+                <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -69,8 +72,8 @@
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -88,6 +91,9 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+            <state />
+          </provider>
           <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="493">
@@ -96,9 +102,6 @@
               </first_editor>
               <second_editor />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-            <state />
           </provider>
         </entry>
       </file>
@@ -130,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/com/ohmast/ghost/Title.java" />
         <option value="$PROJECT_DIR$/src/com/ohmast/ghost/PacketUtils.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/config.yml" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java" />
+        <option value="$PROJECT_DIR$/src/config.yml" />
       </list>
     </option>
   </component>
@@ -167,9 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,13 +223,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -544,11 +547,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -587,7 +590,8 @@
     <MESSAGE value="adding jar file&#10;" />
     <MESSAGE value="adding stuff to readme.md" />
     <MESSAGE value="replacing runnables with lambdas" />
-    <option name="LAST_COMMIT_MESSAGE" value="replacing runnables with lambdas" />
+    <MESSAGE value="making automessages and updating jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="making automessages and updating jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -601,6 +605,9 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
@@ -610,9 +617,6 @@
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -651,6 +655,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -692,6 +697,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -733,6 +739,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,6 +781,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -815,6 +823,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -856,6 +865,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -897,6 +907,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,6 +949,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -979,6 +991,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1020,6 +1033,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,6 +1075,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1102,6 +1117,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1143,6 +1159,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1184,6 +1201,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1225,6 +1243,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1266,6 +1285,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1307,6 +1327,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1348,6 +1369,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,6 +1411,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1416,7 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="295" column="16" selection-start-line="295" selection-start-column="16" selection-end-line="295" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,20 +1446,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="493">
-            <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -1447,12 +1459,13 @@
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="493">
+            <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1464,10 +1477,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ohmast/ghost/Plugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="204" column="25" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
+        <state relative-caret-position="597">
+          <caret line="488" column="29" selection-start-line="488" selection-start-column="29" selection-end-line="488" selection-end-column="29" />
           <folding>
             <element signature="method#switchFlashlight#0;class#Plugin#0" expanded="false" />
             <element signature="method#clearStats#0;class#Plugin#0" expanded="false" />
@@ -1493,6 +1514,7 @@
             <element signature="method#setupScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#resetScoreboard#0;class#Plugin#0" expanded="false" />
             <element signature="method#autoStart#0;class#Plugin#0" expanded="false" />
+            <element signature="method#autoMessage#0;class#Plugin#0" expanded="false" />
           </folding>
         </state>
       </provider>

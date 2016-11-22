@@ -43,7 +43,8 @@ import java.util.*;
 
 public class Plugin extends JavaPlugin implements Listener {
 
-    public String logo = ""+ChatColor.AQUA+ChatColor.BOLD+"Cycle"+ChatColor.GREEN + ChatColor.BOLD + "MC"+ChatColor.GRAY+ChatColor.BOLD+": "+ChatColor.RESET+ChatColor.GOLD;
+    public String logo = ""+ChatColor.AQUA+ChatColor.BOLD+"GhostMansion"+ChatColor.GRAY+ChatColor.BOLD+": "+ChatColor.RESET+ChatColor.GOLD;
+    public String serverLogo = "";
 
     public HashMap<Player, Boolean> flashlights = new HashMap<>();
     public HashMap<Player, Boolean> ingame = new HashMap<>();
@@ -76,6 +77,7 @@ public class Plugin extends JavaPlugin implements Listener {
     public int time = 0;
     public int numingame = 0;
     public int delayNewGameStart = 0;
+    public int messageDelay = 0;
 
     public ScoreboardManager manager;
     public Scoreboard board;
@@ -113,9 +115,13 @@ public class Plugin extends JavaPlugin implements Listener {
         d3meta.setDisplayName(ChatColor.AQUA + "Ghost Detector");
         ghostdetector3.setItemMeta(d3meta);
 
+        messageDelay = getConfig().getInt("messageDelay");
+        serverLogo = getConfig().getString("serverName");
+
         resetScoreboard();
         clearStats();
         autoStart();
+        autoMessage();
     }
 
     public void onDisable() {
@@ -296,6 +302,7 @@ public class Plugin extends JavaPlugin implements Listener {
         resetScoreboard();
         clearStats();
         autoStart();
+        autoMessage();
     }
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -592,5 +599,11 @@ public class Plugin extends JavaPlugin implements Listener {
                 }
             }
         }, 0, 1);
+    }
+    public void autoMessage() {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+            messageAll("Check out "+ChatColor.RED+"oriont.net"+ChatColor.GOLD+" for more cool games and things!");
+            messageAll("Also support " + serverLogo + ChatColor.GOLD+" by going to their website!");
+        }, 0, messageDelay*20);
     }
 }
